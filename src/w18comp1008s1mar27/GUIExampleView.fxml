@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="1000.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="w18comp1008s1mar27.GUIExampleViewController">
+    <stylesheets>
+        <URL value="@guiexampleview.css" />
+    </stylesheets>
+   <children>
+      <VBox layoutX="257.0" layoutY="93.0" prefHeight="800.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="296.0" prefWidth="960.0" spacing="20.0">
+               <children>
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label text="Why Ben's not here:" />
+                        <CheckBox fx:id="sleptInCheckBox" mnemonicParsing="false" onAction="#updateExcuseTextArea" text="Slept in" />
+                        <CheckBox fx:id="workingCheckBox" mnemonicParsing="false" onAction="#updateExcuseTextArea" text="Working at the source" />
+                        <CheckBox fx:id="videoGamesCheckBox" mnemonicParsing="false" onAction="#updateExcuseTextArea" text="Playing video games" />
+                        <CheckBox fx:id="drinkCheckBox" mnemonicParsing="false" onAction="#updateExcuseTextArea" text="too many refreshments last night" />
+                        <CheckBox fx:id="fearCheckBox" mnemonicParsing="false" onAction="#updateExcuseTextArea" text="afraid of Jaret" />
+                        <CheckBox fx:id="musclePainCheckBox" mnemonicParsing="false" onAction="#updateExcuseTextArea" text="still sore from last weeks pushups" />
+                        <TextArea fx:id="excuseTextArea" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" spacing="20.0">
+                     <children>
+                        <Label text="Lying %" />
+                        <Slider fx:id="slider" onMouseDragged="#updateSliderLabel" />
+                        <Label fx:id="sliderLabel" text="Label" />
+                     </children>
+                  </VBox>
+                  <VBox spacing="10.0">
+                     <children>
+                        <ComboBox fx:id="lunchComboBox" onAction="#comboBoxWasUpdated" prefWidth="150.0" promptText="Choose Lunch" />
+                        <Label fx:id="lunchLabel" text="Label" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
