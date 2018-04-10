@@ -6,6 +6,14 @@
     -fx-background-color: #1d3a68;
 }
 
+.customBackground1{
+    -fx-background-color: #bada55;
+}
+
+.customBackground2{
+    -fx-background-color: #7fff00;
+}
+
 .label{
     -fx-font: 20pt Arial;
     -fx-text-fill: whitesmoke;
